@@ -77,6 +77,27 @@
       .hero { padding:3.5rem 0; }
       .project-img { height:160px; }
     }
+    .titulo-animado {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--accent);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  animation:
+    typing 3s steps(30, end),
+    blink .6s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
   </style>
 </head>
 <body>
@@ -117,7 +138,7 @@
     <div class="container">
       <div class="row align-items-center gy-4">
         <div class="col-lg-7">
-          <h1 class="name">Juliana Guimarães de Brito</h1>
+          <h1 class="titulo-animado">Juliana Guimarães de Brito</h1>
           <p class="role">Desenvolvedora Full Stack</p>
           <p class="mb-4" style="color:var(--muted); max-width:56ch;">
             Jornalista e desenvolvedora em transição para TI. Gosto de construir interfaces limpas, automatizar processos e transformar dados em histórias úteis.

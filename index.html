@@ -49,6 +49,41 @@
             color: #00d4ff; /* Cor de destaque ao passar o mouse */
         }
 
+        /* --- CORREÇÕES GERAIS --- */
+        html, body {
+            overflow-x: hidden; /* Remove rolagem horizontal indesejada */
+            width: 100%;
+        }
+
+        /* --- PADRONIZAÇÃO DOS CARDS DE PROJETOS --- */
+        .project-card {
+            height: 100%; /* Garante que todos os cards tenham a mesma altura na linha */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-image {
+            height: 200px; /* Altura fixa para as imagens */
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            height: 100% !important;
+            width: 100% !important;
+            object-fit: cover;
+        }
+
+        .project-content {
+            flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content .project-description {
+            flex-grow: 1; /* Empurra os botões para o final do card */
+        }
+
         /* --- MELHORIAS DE RESPONSIVIDADE --- */
 
         /* Fix para centralizar a tela de carregamento em qualquer dispositivo */
@@ -74,6 +109,17 @@
 
         /* Ajustes específicos para Mobile */
         @media (max-width: 768px) {
+            /* Centralização Geral */
+            .hero-content, 
+            .about-content, 
+            .contact-info,
+            .section-header {
+                text-align: center !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             /* Ícones da stack menores */
             .tech-stack .tech-icon {
                 font-size: 2.5rem;
@@ -96,6 +142,37 @@
                 width: 100%;
             }
             
+            /* Centralizar links sociais */
+            .social-links {
+                justify-content: center;
+            }
+
+            /* Ajustes na seção Sobre Mim */
+            .about-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            
+            .about-buttons .btn {
+                margin-left: 0 !important;
+                width: 100%;
+            }
+
+            /* Ajustes nos itens de contato */
+            .contact-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
             /* Ajuste do texto de carregamento para não quebrar */
             .loading-text {
                 display: flex;

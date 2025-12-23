@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliana Guimarães - Desenvolvedora Full Stack</title>
+    
+    <!-- Meta tags para SEO e redes sociais -->
+    <meta name="description" content="Portfólio de desenvolvedor full stack com tecnologias modernas e projetos inovadores">
+    <meta name="keywords" content="desenvolvedor, full stack, javascript, react, nodejs, portfólio">
+    <meta property="og:title" content="Portfólio Tech - Desenvolvedora Full Stack">
+    <meta property="og:description" content="Desenvolvedor apaixonado por tecnologia e inovação">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados para a Stack Principal */
+        .tech-stack .tech-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem; /* Espaçamento entre os ícones */
+        }
+        
+        .tech-stack .tech-icon {
+            font-size: 4rem; /* Aumenta o tamanho dos ícones */
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .tech-stack .tech-icon:hover {
+            transform: translateY(-10px) scale(1.1); /* Efeito de levitação e aumento */
+            color: #00d4ff; /* Cor de destaque ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-text">
+                <span class="loading-char">C</span>
+                <span class="loading-char">A</span>
+                <span class="loading-char">R</span>
+                <span class="loading-char">R</span>
+                <span class="loading-char">E</span>
+                <span class="loading-char">G</span>
+                <span class="loading-char">A</span>
+                <span class="loading-char">N</span>
+                <span class="loading-char">D</span>
+                <span class="loading-char">O</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js" class="particles-container"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home" data-aos="fade-right">
+                <span class="brand-icon">&lt;/&gt;</span>
+                <span class="brand-text">JulianaPortfolio</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-section="home">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-section="about">
+                            <i class="fas fa-user"></i> Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" data-section="skills">
+                            <i class="fas fa-code"></i> Habilidades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-section="projects">
+                            <i class="fas fa-briefcase"></i> Projetos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-section="contact">
+                            <i class="fas fa-envelope"></i> Contato
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle ms-3" data-aos="fade-left">
+                    <button id="theme-toggle" class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="home-content">
+                        <div class="greeting-text">
+                            <span class="wave">👋</span>
+                            <span>Olá, sou</span>
+                        </div>
+                        
+                        <h1 class="hero-name">
+                            <span class="firstname">Juliana</span>
+                            <span class="lastname">Guimarães</span>
+                        </h1>
+                        
+                        <div class="typing-container">
+                            <span class="typing-text"></span>
+                            <span class="cursor">|</span>
+                        </div>
+                        
+                        <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                            Desenvolvedora Full Stack apaixonada por criar experiências digitais incríveis 
+                            com as tecnologias mais modernas do mercado.
+                        </p>
+                        
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#projects" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-eye"></i> Ver Projetos
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-comments"></i> Vamos Conversar
+                            </a>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="social-links" data-aos="fade-up" data-aos-delay="600">
+                            <a href="https://github.com/JunnyBritto" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/juliana-britoti/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/junnybritto/" class="social-link" title="Instagram" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image-container">
+                        <div class="hero-image">
+                            <div class="code-window">
+                                <div class="window-header">
+                                    <div class="window-controls">
+                                        <span class="control close"></span>
+                                        <span class="control minimize"></span>
+                                        <span class="control maximize"></span>
+                                    </div>
+                                    <div class="window-title">portfolio.js</div>
+                                </div>
+                                <div class="code-content">
+                                    <pre><code class="code-animation">
+                            <img src="./img/perfil.png" alt="perfil juliana" class="img-fluid d-block mx-auto rounded" style="width: 100%; height: auto; object-fit: cover;">
+
+<div class="text-center mt-3">console.log('Welcome to my digital world! 🚀');</div></code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Sobre Mim</h2>
+                <p class="section-subtitle">Conheça minha história e paixão pela tecnologia</p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="about-image-container">
+                        <div class="about-image">
+                         
+                            <div class="image-border">
+                                <img src="./img/eeeu.JPG" alt="minha foto" class="img-fluid rounded w-100 shadow-lg" style="border: 2px solid #00d4ff; box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="about-content ps-lg-5">
+                        <h3>Transformando Ideias em Realidade Digital</h3>
+                        <p>
+                            Sou formada em Análise e Desenvolvimento de Sistemas pela universidade Estácio de Sá e estou cursando 
+                            Full Stack Python pela EBAC. Minha paixão por tecnologia surgiu quando eu era pequena e recebi meu primeiro
+                            computador. Eu fui a primeira da turma a ter um PC e gostava muito de ensinar os outros a mexer, levando meus colegas
+                            em casa. Sempre que acontecia algum imprevisto, era eu que fuçava o PC em busca de soluções.
+                            Conforme fui crescendo, tive bastante interesse em desenvolvimento e design. Comecei a fazer HTML para blogs em Blogspots
+                            e desenvolvia o design no Photoshop. Eu recebia bastante encomendas, principalmente de blogs que eram Fã Clubes de famosos.
+                            Aprendi tudo sozinha na minha adolescência. Atualmente, sou Desenvolvedora Jr e tenho interesse em desenvolvimento de jogos e Cyber Security.
+                        </p>
+                    
+                        </p>
+                        
+                        <div class="about-buttons mt-4">
+                            <a href="https://drive.google.com/drive/folders/1rstUbeM7eeB5hLmwVTvp9p42QWYrAk2m" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-certificate"></i> Certificados
+                            </a>
+                            <a href="./CV Juliana Brito DEV.pdf" class="btn btn-outline-primary ms-2" download>
+                                <i class="fas fa-download"></i> Baixar CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Habilidades Técnicas</h2>
+                <p class="section-subtitle">Tecnologias que domino e utilizo nos meus projetos</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="row">
+                    <!-- Frontend Skills -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">
+                                <i class="fas fa-palette"></i> Frontend
+                            </h4>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span class="skill-name">JavaScript</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">React</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Vue.js</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">CSS/SASS</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="92%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Skills -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">
+                                <i class="fas fa-server"></i> Backend
+                            </h4>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span class="skill-name">Node.js</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="93%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Python</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="88%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Express.js</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">MongoDB</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- DevOps Skills -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">
+                                <i class="fas fa-cogs"></i> DevOps
+                            </h4>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span class="skill-name">Docker</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="82%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">AWS</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="78%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Git</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">CI/CD</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tech Stack Icons -->
+                <div class="tech-stack mt-5" data-aos="fade-up" data-aos-delay="400">
+                    <h5 class="text-center mb-4">Stack Principal</h5>
+                    <div class="tech-icons">
+                        <div class="tech-icon" title="JavaScript">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="tech-icon" title="React">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-icon" title="Node.js">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-icon" title="Python">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="tech-icon" title="Git">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                       <!-- <div class="tech-icon" title="Docker">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="tech-icon" title="AWS">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="tech-icon" title="MongoDB">
+                            <i class="fas fa-database"></i> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <p class="section-subtitle">Alguns dos meus trabalhos mais recentes e inovadores</p>
+            </div>
+            
+            <!-- Sites Category -->
+            <div class="projects-categories" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="category-title">Sites</h3>
+            </div>
+            
+            <!-- Sites Grid -->
+            <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="row">
+                    <!-- Site 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./img/espaco organico.gif" alt="Delivery Espaço Orgânico" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Delivery Espaço Orgânico</h5>
+                                <p class="project-description">
+                                    Site de um restaurante fictício desenvolvido para treinar Javascript. Nele é possível adicionar itens ao carrinho, somar a compra e remover os itens.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="project-tech mb-0">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">CSS</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="https://espaco-organico.vercel.app/" class="btn btn-primary btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Deploy
+                                        </a>
+                                        <a href="https://github.com/JunnyBritto/espaco-organico" class="btn btn-outline-light btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fab fa-github me-1"></i> Repositório
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Site 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./img/Make e Ju.gif" alt="Loja Make e Ju" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Loja Make e Ju</h5>
+                                <p class="project-description">
+                                    Loja virtual fictícia onde criei a logo e a identidade visual. Implementei um carrossel de imagens e layout responsivo.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="project-tech mb-0">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">Bootstrap</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="https://makeeju.vercel.app/" class="btn btn-primary btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Deploy
+                                        </a>
+                                        <a href="https://github.com/JunnyBritto/makeeju" class="btn btn-outline-light btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fab fa-github me-1"></i> Repositório
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Site 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./img/chrome-capture-2025-12-20.gif" alt="Restaurante Divino Paladar" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Restaurante Divino Paladar</h5>
+                                <p class="project-description">
+                                    Site de um restaurante fictício desenvolvido durante o curso Full Stack Python da EBAC. Interface responsiva e interativa.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="project-tech mb-0">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">Bootstrap</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="https://divino-paladar-restaurante.vercel.app/" class="btn btn-primary btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Deploy
+                                        </a>
+                                        <a href="https://github.com/JunnyBritto/Divino-Paladar---Restaurante" class="btn btn-outline-light btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fab fa-github me-1"></i> Repositório
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Site 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./img/miniaturas de terror.gif" alt="Loja Miniaturas de terror" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Loja Miniaturas de Terror</h5>
+                                <p class="project-description">
+                                    Loja virtual fictícia de bonecos de terror. Primeiro contato com responsividade, utilizando Grid e Flexbox.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="project-tech mb-0">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">CSS</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="https://minuaturasterror.vercel.app/" class="btn btn-primary btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Deploy
+                                        </a>
+                                        <a href="https://github.com/JunnyBritto/minuaturasterror" class="btn btn-outline-light btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fab fa-github me-1"></i> Repositório
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Site 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./img/moranguinho.gif" alt="Cadastro de Franqueado" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Cadastro de Franqueado</h5>
+                                <p class="project-description">
+                                    Formulário de franqueado da Sorveteria Moranguinho. Primeiro trabalho com Bootstrap, com layout responsivo.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="project-tech mb-0">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">Bootstrap</span>
+                                        <span class="tech-tag">CSS</span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="https://cadastro-franqueado.vercel.app/" class="btn btn-primary btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Deploy
+                                        </a>
+                                        <a href="https://github.com/JunnyBritto/exercicio_bootstrap" class="btn btn-outline-light btn-sm py-1 px-2" style="font-size: 0.75rem;" target="_blank">
+                                            <i class="fab fa-github me-1"></i> Repositório
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Jogos Category -->
+            <div class="projects-categories mt-5" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="category-title">Jogos</h3>
+                <p>Em breve!</p>
+            </div>
+            
+            
+        <!--<div class="projects-grid" data-aos="fade-up" data-aos-delay="400">
+                <div class="row">
+                    <!-- Jogo 1 
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" title="Jogar">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                        <a href="#" class="project-link" title="Ver Código">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Space Invaders 3D</h5>
+                                <p class="project-description">
+                                    Jogo clássico de Space Invaders em 3D com gráficos modernos, 
+                                    power-ups e sistema de pontuação online.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Unity</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">WebGL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Jogo 2 
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" title="Jogar">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                        <a href="#" class="project-link" title="Ver Código">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Puzzle Master</h5>
+                                <p class="project-description">
+                                    Jogo de quebra-cabeça com múltiplos níveis, sistema de dicas 
+                                    e classificação global de jogadores.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Canvas API</span>
+                                    <span class="tech-tag">LocalStorage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Jogo 3 
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" title="Jogar">
+                                            <i class="fas fa-play"></i>
+                                        </a>
+                                        <a href="#" class="project-link" title="Ver Código">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h5 class="project-title">Rocket Runner</h5>
+                                <p class="project-description">
+                                    Jogo endless runner onde você controla um foguete, desviando de obstáculos 
+                                    e coletando power-ups.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Phaser.js</span>
+                                    <span class="tech-tag">Web Audio API</span>
+                                    <span class="tech-tag">LocalStorage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View More Button 
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="300">
+                <a href="#" class="btn btn-outline-primary">
+                    <i class="fas fa-plus"></i> Ver Mais Projetos
+                </a>
+            </div>
+        </div>
+    </section>  -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Vamos Trabalhar Juntos</h2>
+                <p class="section-subtitle">Tem um projeto em mente? Entre em contato comigo!</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-5 mb-4" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Informações de Contato</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Email</h6>
+                                <p>juliana.trainor@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Telefone</h6>
+                                <p>+55 (11) 95745-0934</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Localização</h6>
+                                <p>Guarulhos-SP, Brasil</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social mt-4">
+                            <h6>Redes Sociais</h6>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/juliana-britoti/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/JunnyBritto" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.instagram.com/junnybritto/" class="social-link" title="Instagram" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Nome *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                    <div class="invalid-feedback">Por favor, insira seu nome.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">Por favor, insira um email válido.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Assunto *</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                                <div class="invalid-feedback">Por favor, insira um assunto.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensagem *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">Por favor, insira sua mensagem.</div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <span class="btn-text">Enviar Mensagem</span>
+                                <span class="btn-loading d-none">
+                                    <i class="fas fa-spinner fa-spin"></i> Enviando...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">
+                        © 2026 Juliana Guimarães. Todos os direitos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        Desenvolvido com <i class="fas fa-heart text-danger"></i> e muito código
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

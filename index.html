@@ -48,6 +48,62 @@
             transform: translateY(-10px) scale(1.1); /* Efeito de levitação e aumento */
             color: #00d4ff; /* Cor de destaque ao passar o mouse */
         }
+
+        /* --- MELHORIAS DE RESPONSIVIDADE --- */
+
+        /* Fix para centralizar a tela de carregamento em qualquer dispositivo */
+        #loading-screen {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            flex-direction: column !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loading-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Ajustes específicos para Mobile */
+        @media (max-width: 768px) {
+            /* Ícones da stack menores */
+            .tech-stack .tech-icon {
+                font-size: 2.5rem;
+                margin: 0.5rem;
+            }
+            
+            .tech-stack .tech-icons {
+                gap: 1rem;
+            }
+
+            /* Botões do Hero empilhados no mobile */
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-buttons .btn {
+                margin-right: 0 !important;
+                width: 100%;
+            }
+            
+            /* Ajuste do texto de carregamento para não quebrar */
+            .loading-text {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>

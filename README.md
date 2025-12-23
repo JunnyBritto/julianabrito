@@ -1,4 +1,4 @@
-# 🚀 Portfolio Tech - Website Demonstração
+# 🚀 Portfolio Tech - Website Demonstração - Versão 2.0
 
 Um site de portfólio ultra-moderno e tecnológico com efeitos visuais impressionantes, animações avançadas e design responsivo. Desenvolvido com as mais recentes tecnologias web para criar uma experiência única e memorável.
 
